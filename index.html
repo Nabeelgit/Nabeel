@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nabeel Ahmed</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Hi, I'm Nabeel Ahmed</h1>
+    <p class="subtitle">I am a software developer based in the Greater Tampa Bay Area. I've been programming since 2021 <br> and have a passion for building web and mobile applications.</p>
+    <div class="logo-container">
+        <div class="logo-scroll">
+            <!-- Images will be dynamically added here -->
+        </div>
+    </div>
+    <script>
+        const logoScroll = document.querySelector('.logo-scroll');
+        const logoFiles = ['cpplogo.png', 'csslogo.png', 'htmllogo.png', 'Javascriptlogo.png', 'pythonlogo.png', 'reactlogo.png', 'mongodb.jpg', 'mysqllogo.jpg', 'phplogo.png', 'threejslogo.png'];
+
+        logoFiles.forEach(file => {
+            const img = document.createElement('img');
+            img.src = `./assets/logos/${file}`;
+            img.alt = file.split('.')[0];
+            img.className = 'logo';
+            logoScroll.appendChild(img);
+        });
+    </script>
+</body>
+</html>
