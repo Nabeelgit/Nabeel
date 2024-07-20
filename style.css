@@ -1,4 +1,3 @@
-
 .pixelify-sans-pixel {
     font-family: "Pixelify Sans", sans-serif;
     font-optical-sizing: auto;
@@ -12,6 +11,7 @@ body {
     background-size: cover;
     background-position: center;
     font-family: "Pixelify Sans", sans-serif;
+    overflow-x: hidden;
 }
 
 h1 {
@@ -35,7 +35,6 @@ h1 {
     width: 100%;
     margin-top: 5rem;
 }
-
 .logo-scroll {
     display: flex;
     animation: scroll 20s linear infinite;
@@ -47,4 +46,58 @@ h1 {
     100% {
         transform: translateX(-100%);
     }
+}
+
+.link-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 equal columns */
+    gap: 1rem; /* Add gap between the boxes */
+    margin-top: 3rem;
+    padding: 0 2rem; /* Add padding to the container to create space on the edges */
+}
+
+.link-box {
+    display: block;
+    text-decoration: none;
+    color: white;
+    background-color: black;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 400px; /* Adjust height to make boxes larger vertically */
+}
+
+.link-box:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.link-image {
+    height: 200px; /* Adjust height of the image section */
+    overflow: hidden; /* Hide any overflow */
+}
+
+.link-image img {
+    width: 100%; /* Make image width 100% of container */
+    height: 100%; /* Make image height 100% of container */
+    object-fit: cover; /* Cover the area without stretching */
+    object-position: center; /* Center the image */
+}
+
+.link-content {
+    padding: 1rem;
+    text-align: center;
+    color: white; /* Ensure text is visible on black background */
+}
+
+.link-content h2 {
+    margin: 0.5rem 0;
+    font-size: 1.5rem;
+}
+
+.link-content p {
+    margin: 0;
+    font-size: 1rem;
+    color: #bbb; /* Lighten the paragraph text color for better readability */
 }
